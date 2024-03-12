@@ -21,3 +21,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 #todo look at Route::domain function
 Route::post('/pokerface/evaluate', [GameController::class, 'pokerfaceEvaluate']);
+Route::post('/pokerface/start', [GameController::class, 'pokerfaceStartGame']);
+
