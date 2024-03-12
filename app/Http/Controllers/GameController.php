@@ -16,16 +16,21 @@ class GameController extends Controller
         $this->chessRepository = $chessRepository;
     }
 
-    public function pokerfaceEvaluate(Request $request)
+    public function pokerfaceEvaluate(Request $request): string
     {
         $data = ['pokerface'];
-        return $this->pokerfaceRepository->evaluate($data);
+        return $this->pokerfaceRepository->evaluateHand($data);
     }
 
-    public function chessEvaluate(Request $request)
+    public function pokerfaceStartGame(Request $request): string
+    {
+        return $this->pokerfaceRepository->startGame();
+    }
+
+    public function chessEvaluate(Request $request): string
     {
         $data = ['chess'];
-        return $this->chessRepository->evaluate($data);
+        return $this->chessRepository->evaluateHand($data);
     }
 
 }
