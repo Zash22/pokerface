@@ -2,10 +2,15 @@
 
 namespace App\Domains\Game\Repositories;
 
-class PokerfaceRepository
+class PokerfaceRepository extends BaseGameRepository
 {
-    public function evaluate(array $data): string
+    /**
+     * @param array $data
+     * @return string
+     */
+    public function evaluateHand(array $data): string
     {
         return 'PokerFace';
     }
+
 }

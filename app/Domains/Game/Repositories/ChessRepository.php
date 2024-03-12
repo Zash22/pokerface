@@ -1,10 +1,21 @@
 <?php
 
 namespace App\Domains\Game\Repositories;
-class ChessRepository
+class ChessRepository extends BaseGameRepository
 {
-    public function evaluate(array $data): string
+    /**
+     * @param array $data
+     * @return string
+     */
+    public function evaluateHand(array $data): string
     {
         return 'Chess';
+    }
+
+    /**
+     * @return string
+     */
+    public function startGame(): string
+    {
     }
 }
