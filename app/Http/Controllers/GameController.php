@@ -18,8 +18,7 @@ class GameController extends Controller
 
     public function pokerfaceEvaluate(Request $request): string
     {
-        $data = ['pokerface'];
-        return $this->pokerfaceRepository->evaluateHand($data);
+        return $this->pokerfaceRepository->evaluateHand($request->request->all());
     }
 
     public function pokerfaceStartGame(Request $request): string
