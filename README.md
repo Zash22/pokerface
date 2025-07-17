@@ -5,4 +5,5 @@ Setup:
 
 1. git clone git@github.com:Zash22/pokerface.git
 2. composer install
+3. npm install
 3. php artisan serve
